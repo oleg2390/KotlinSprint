@@ -1,7 +1,6 @@
 package org.example.lesson_1
 
 fun main () {
-    println("Тестовое решение задач к уроку 1 задаче 4")
 
     val length: Long = 40_868_600_000
     val age: Byte = 27
