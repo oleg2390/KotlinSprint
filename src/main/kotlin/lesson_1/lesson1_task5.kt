@@ -1,20 +1,18 @@
 package org.example.lesson_1
 
+const val MAGIC_NUMBER = 60
 fun main () {
-    println("Тестовое решение задач к уроку 1 задаче 5")
-    println()
-
     val second: Long = 6480//колличество секунда Гагарина в космосе
 
-    val resultOfMinute = second / 60
+    val resultOfMinute = second / MAGIC_NUMBER
 
-    val resulOfHour = resultOfMinute / 60
-    val resulOfHourBalance = resultOfMinute % 60
-    val resultOfMinuteBalance = second % 60
+    val resulOfHour = resultOfMinute / MAGIC_NUMBER
+    val resulOfHourBalance = resultOfMinute % MAGIC_NUMBER
+    val resultOfMinuteBalance = second % MAGIC_NUMBER
+    val result = String.format("%02d", resulOfHour) //сделал разными способоми
+    val formatedNum = resultOfMinuteBalance.toString().padStart(2, '0')
 
-    println("Гагарин провел в космосе 0$resulOfHour:$resulOfHourBalance:0$resultOfMinuteBalance")
 
-
-
+    println("Гагарин провел в космосе $result:$resulOfHourBalance:$formatedNum")
 
 }
