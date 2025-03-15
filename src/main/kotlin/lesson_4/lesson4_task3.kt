@@ -3,7 +3,7 @@ package org.example.lesson_4
 const val DEFAULT_SUNNY = true
 const val DEFAULT_TENT = true
 const val DEFAULT_PERCENT = 20
-const val DEFAULT_SEASON = "не зима"
+const val DEFAULT_SEASON = "зима"
 fun main () {
 
     val sunny: Boolean = true
@@ -15,6 +15,6 @@ fun main () {
         DEFAULT_SUNNY == sunny &&
         DEFAULT_TENT == tentOpen &&
         DEFAULT_PERCENT == percent &&
-        DEFAULT_SEASON == season
+        DEFAULT_SEASON != season
     }")
 }
