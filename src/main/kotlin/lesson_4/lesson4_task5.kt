@@ -6,18 +6,18 @@ const val MIN_PROVISION = 50
 fun main () {
 
     println("наличие повреждений корпуса")
-    val noDamage = readln().toBoolean()
+    val hasDamage = readln().toBoolean()
     println("текущий состав экипажа")
     val crew = readln().toInt()
     println("количество ящиков с провизией на борту")
     val provision = readln().toInt()
     println("благоприятность метеоусловий")
-    val weather = readln().toBoolean()
+    val hasWeather = readln().toBoolean()
 
     print("Научно-исследовательский корабль может приступить к долгосрочному плаванию: ")
     println(
-        (!noDamage && crew in MIN_NUMBER_CREW..MAX_NUMBER_CREW && provision > MIN_PROVISION) ||
-            (noDamage && crew == MAX_NUMBER_CREW && provision >= MIN_PROVISION && weather)
+        (!hasDamage && crew in MIN_NUMBER_CREW..MAX_NUMBER_CREW && provision > MIN_PROVISION) ||
+            (hasDamage && crew == MAX_NUMBER_CREW && provision >= MIN_PROVISION && hasWeather)
 
     )
 
