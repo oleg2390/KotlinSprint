@@ -3,6 +3,7 @@ package org.example.lesson_4
 const val MIN_NUMBER_CREW = 55
 const val MAX_NUMBER_CREW = 70
 const val MIN_PROVISION = 50
+
 fun main () {
 
     println("наличие повреждений корпуса")
