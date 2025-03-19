@@ -20,7 +20,7 @@ fun main() {
             println("Поздравляем! Вы выиграли главный приз!")
 
         (firstNumberUser == firstNumberWin && secondNumberUser != secondNumberWin) ||
-                (firstNumberUser != firstNumberWin || secondNumberWin == secondNumberWin) ->
+                (firstNumberUser != firstNumberWin || secondNumberUser == secondNumberWin) ->
             println("Вы выиграли утешительный приз!")
 
         else -> println("Неудача!")
