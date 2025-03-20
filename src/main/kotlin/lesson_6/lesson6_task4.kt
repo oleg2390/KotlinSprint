@@ -1,10 +1,8 @@
 package org.example.lesson_6
 
-import kotlin.random.Random
-
 fun main() {
 
-    val randomNumber = Random.nextInt(1,9)
+    val randomNumber = (1..9).random()
     var numberCounter = 5
 
     println("нужно угадать число в промежутке от 1 до 9")
