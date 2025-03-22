@@ -11,7 +11,6 @@ fun main() {
         println("Играем дальше?")
         val userInput = readln().toString()
     } while (userInput == "да")
-
     println(winResultUser)
 }
 
