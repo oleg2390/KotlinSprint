@@ -4,7 +4,8 @@ fun main() {
 
     val listIngredients = listOf("лук", "салат", "морковь", "соль")
 
-    for (index in listIngredients.indices){
-        println("В рецепте есть следующие ингредиенты: ${listIngredients[index]}")
+    println("В рецепте есть следующие ингредиенты:")
+    listIngredients.forEach{
+        println(it)
     }
 }
