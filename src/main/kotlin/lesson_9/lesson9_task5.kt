@@ -17,12 +17,10 @@ fun main() {
         listIngredients.add(userIngredient)
     }
 
-    listIngredients.sorted()
-
     val formateList = listIngredients.mapIndexed { index, ingredient ->
         if (index == 0) {
             ingredient.replaceFirstChar { it.uppercase() }
         } else ingredient
     }
-    println(formateList)
+    println(formateList.sorted().joinToString())
 }
