@@ -5,12 +5,14 @@ fun main() {
     val listIngredients = listOf(2, 50, 15)
 
     println("Введите количество порций")
-    val userInput = readln().toInt()
+    val numOfPortions = readln().toInt()
+
+    val neededComponent = listIngredients.map { it * numOfPortions }
 
     println("""
-        На $userInput порций вам понадобится:
-        Яиц – ${listIngredients[0] * userInput}
-        молока – ${listIngredients[1] * userInput} мл
-        сливочного масла – ${listIngredients[2] * userInput} гр
+        На $numOfPortions порций вам понадобится:
+        Яиц – ${neededComponent[0]}
+        молока – ${neededComponent[1]} мл
+        сливочного масла – ${neededComponent[2]} гр
     """.trimIndent())
 }
