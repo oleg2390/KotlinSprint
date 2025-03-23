@@ -1,5 +1,7 @@
 package org.example.lesson_9
 
+const val EQUALS_STRING = "да"
+
 fun main() {
 
     val listIngredients = mutableListOf("лук", "соль", "перец")
@@ -7,7 +9,7 @@ fun main() {
     println("Желаете добавить еще?")
     val userResponse = readln().toString()
 
-    if (userResponse.equals("да", ignoreCase = true)) {
+    if (userResponse.equals(EQUALS_STRING, ignoreCase = true)) {
         println("Какой ингредиент вы хотите добавить?")
         val userAddIngredient = readln().toString()
         listIngredients.add(userAddIngredient)
