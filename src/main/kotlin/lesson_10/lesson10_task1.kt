@@ -2,17 +2,16 @@ package org.example.lesson_10
 
 fun main() {
 
-    val user = rollsDie()
-    println("Игрок выбросил $user")
-    val computer = rollsDie()
-    println("Машина выбросила $computer")
+    val userScore = rollsDice()
+    println("Игрок выбросил $userScore")
+    val computerScore = rollsDice()
+    println("Машина выбросила $computerScore")
 
     when {
-        user == computer -> println("Победила дружба")
-        user > computer -> println("Победило человечество")
+        userScore == computerScore -> println("Победила дружба")
+        userScore > computerScore -> println("Победило человечество")
         else -> println("Победила машина")
     }
 }
-fun rollsDie (): Int {
-    return (1..6).random()
-}
+
+fun rollsDice(): Int = (1..6).random()
