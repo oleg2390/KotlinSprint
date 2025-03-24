@@ -13,5 +13,4 @@ fun main() {
         else -> println("Победила машина")
     }
 }
-
 fun rollsDice(): Int = (1..6).random()
