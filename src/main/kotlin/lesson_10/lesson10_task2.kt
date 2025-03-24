@@ -8,12 +8,12 @@ fun main() {
     println("Введите пароль")
     val userPassword = readln()
 
-    if (isValidLength(userName) && isValidLength(userPassword)){
+    if (isValidLength(userName) && isValidLength(userPassword)) {
         println("Добро пожаловать")
-    }else
+    } else
         println("Логин или пароль недостаточно длинные")
 }
 
-fun isValidLength(inputChar: String): Boolean {
-    return inputChar.length >= 4
-}
+const val CHAR_LENGTH = 4
+
+fun isValidLength(inputChar: String): Boolean = inputChar.length >= CHAR_LENGTH
