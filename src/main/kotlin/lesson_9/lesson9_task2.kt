@@ -14,5 +14,5 @@ fun main() {
         val userAddIngredient = readln().toString()
         listIngredients.add(userAddIngredient)
         println("Теперь в рецепте есть следующие ингредиенты: ${listIngredients.joinToString()}")
-    } else return
+    }
 }
