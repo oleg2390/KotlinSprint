@@ -10,6 +10,7 @@ class WeatherInf(
     nightTemperature: Int,
     precipitationDay: Boolean,
 ) {
+
     private var _daytimeTemperature: Int = daytimeTemperature
     private var _nightTemperature: Int = nightTemperature
     private var _precipitationDay: Boolean = precipitationDay
