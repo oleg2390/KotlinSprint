@@ -1,9 +1,13 @@
 package org.example.lesson_12
 
+
+
 const val CELS1 = 273.15
 
 fun main() {
-    val weatherInf = WeatherInf(320, 300, false).printWeather()
+
+
+    val weatherInf = WeatherInf(320, 300, false)
 }
 
 class WeatherInf(
@@ -16,6 +20,10 @@ class WeatherInf(
     private var _nightTemperature = nightTemperature - CELS1
     private var _precipitationDay: Boolean = precipitationDay
 
+    init {
+        printWeather()
+    }
+
     fun printWeather() {
         println(
             """
@@ -24,5 +32,6 @@ class WeatherInf(
             возможны осадки - $_precipitationDay
         """.trimIndent()
         )
+
     }
 }
