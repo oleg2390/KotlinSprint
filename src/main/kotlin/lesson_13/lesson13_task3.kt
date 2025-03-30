@@ -9,7 +9,9 @@ fun main() {
         PhoneDir1("Victor", 8953432145),
         PhoneDir1("Masha", 8953443345),
     )
-    listContacts.forEach { println("${it.name} - ${it.phone} - ${it.company}") }
+   val filterListContacts  = listContacts
+       .filter { it.company != null }
+       .forEach { println("${it.name} - ${it.phone} - ${it.company}")}
 }
 
 class PhoneDir1(
