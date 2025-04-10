@@ -2,17 +2,16 @@ package org.example.lesson_16
 
 fun main() {
 
-    val userAutorization = UserAutorization().validationUser("1234")
+    val userAutorization = UserAutorization("oleg", "1234").validationUser("1234")
 
     if (userAutorization) println("авторизация пройдена") else println("Error")
 }
 
 class UserAutorization(
 
-    val login: String = "oleg",
+    private val login: String,
+    private val password: String,
 ) {
 
-    private val password: String = "12345"
-
-    fun validationUser(passwordUser: String) =  (password == passwordUser)
+    fun validationUser(passwordUser: String) = (password == passwordUser)
 }
