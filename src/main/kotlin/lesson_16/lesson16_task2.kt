@@ -1,5 +1,7 @@
 package org.example.lesson_16
 
+import kotlin.math.pow
+
 private const val NUMBER_PI = 3.14
 
 fun main() {
@@ -20,7 +22,7 @@ class CircleResult(
     }
 
     fun getAreaCircle() {
-        val result = NUMBER_PI * radius * radius
+        val result = NUMBER_PI * radius.toDouble().pow(2)
         println("площадь круга - $result")
     }
 }
