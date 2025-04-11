@@ -17,6 +17,5 @@ class Ship(
         get() = field
         set(value) {
             println("нельзя менять")
-            field = value
         }
 }
