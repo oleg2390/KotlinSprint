@@ -7,9 +7,6 @@ class ElementQuiz(
 ) {
     var question: String = question
         get() = field
-        set(value) {
-            field = value
-        }
 
     var answer: String = answer
         get() = field
