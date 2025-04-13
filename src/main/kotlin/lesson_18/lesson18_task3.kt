@@ -13,24 +13,24 @@ fun main() {
     }
 }
 
-interface Animals {
-    val nameAnimals: String
-    fun eat()
+abstract class Animals(val nameAnimals: String) {
+
+   abstract fun eat()
 }
 
-class Kat(override val nameAnimals: String): Animals {
+class Kat(nameAnimals: String): Animals(nameAnimals) {
     override fun eat() {
         println("$nameAnimals -> ест рыбу")
     }
 }
 
-class Dog(override val nameAnimals: String): Animals {
+class Dog(nameAnimals: String): Animals(nameAnimals) {
     override fun eat() {
         println("$nameAnimals -> ест мясо")
     }
 }
 
-class Fox(override val nameAnimals: String): Animals {
+class Fox(nameAnimals: String): Animals(nameAnimals) {
     override fun eat() {
         println("$nameAnimals -> ест ягоды")
     }
