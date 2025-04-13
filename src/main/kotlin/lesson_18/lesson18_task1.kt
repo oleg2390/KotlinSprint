@@ -2,24 +2,22 @@ package org.example.lesson_18
 
 fun main() {
 
-    val crm = Crm(10, "computer")
-    crm.printCrm()
+    val crm = Crm(10)
+    crm.printCrm("computer")
 
-    val crm2 = Crm(20, listOf("computer", "video carta", "box"))
-    crm2.printCrm()
+    val crm2 = Crm(20)
+    crm2.printCrm(listOf("computer", "video carta", "box"))
 }
 
 class Crm(
     val numberOrderPac: Int,
-    private val product: Any,
 ){
-    fun printCrm() {
-        when(product) {
-            is String -> println("Заказан товар: $product")
-            is List<*> -> {
-                val productList = product.filterIsInstance<String>()
-                println("Заказаны следующие товары: ${productList.joinToString()}")
-            }else -> println("не верный формат")
-        }
+
+    fun printCrm(product: String) {
+        println("Заказан товар: $product")
+    }
+
+    fun printCrm(product: List<String>) {
+        println("Заказаны следующие товары: ${product.joinToString()}")
     }
 }
