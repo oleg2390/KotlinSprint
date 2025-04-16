@@ -2,10 +2,10 @@ package org.example.lesson_20
 
 fun main() {
 
-    val player2 = Player2(true)
+    val player2 = Player2(false)
 
     val checkPlayerKey: (Player2) -> String = {
-        if (false) {
+        if (it.isKey) {
             "Игрок открыл дверь"
         } else "Дверь заперта"
     }
