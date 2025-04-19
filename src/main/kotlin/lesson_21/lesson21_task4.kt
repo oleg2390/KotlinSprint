@@ -4,5 +4,7 @@ import java.io.File
 
 fun File.writeMassage( massage: String) {
 
-    this.appendText("\n${massage.lowercase()}")
+    val originalText =  this.readText()
+    val updateText = (massage + originalText).lowercase()
+    this.writeText(updateText)
 }
