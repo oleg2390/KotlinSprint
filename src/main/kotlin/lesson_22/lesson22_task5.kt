@@ -9,14 +9,12 @@ fun main() {
         distance = 4.37
     )
 
-    val (namePlanet, descriptionPlanet, data, distanceOfPlanet) = alphaCentauri
-
     println(
         """
-        Название - $namePlanet
-        Описание - $descriptionPlanet
-        Дата - $data
-        Дистанция от земли - $distanceOfPlanet
+        Название - ${alphaCentauri.component1()}
+        Описание - ${alphaCentauri.component2()}
+        Дата - ${alphaCentauri.component3()}
+        Дистанция от земли - ${alphaCentauri.component4()}
     """.trimIndent()
     )
 }
