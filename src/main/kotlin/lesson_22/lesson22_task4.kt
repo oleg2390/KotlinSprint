@@ -6,12 +6,12 @@ fun main() {
     mainScreenViewModel.loadData()
 }
 
-data class MainScreen(
-    val data: String = "",
-    val isLoading: Boolean = false,
-)
-
 class MainScreenViewModel() {
+
+    data class MainScreen(
+        val data: String = "",
+        val isLoading: Boolean = false,
+    )
 
     var mainScreenViewModel = MainScreen()
         private set
